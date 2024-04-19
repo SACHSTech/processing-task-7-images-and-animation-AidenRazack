@@ -1,20 +1,20 @@
 import processing.core.PApplet;
-
+/**
+ * A program that generates an image background and animates an image and shape with edge detection
+ * @author: A. Razack
+ *
+ */
+import processing.core.PImage;
 public class Sketch extends PApplet {
 	
-	
-  /**
-   * Called once at the beginning of execution, put your size all in this method
-   */
+  PImage backgroundImage;
+
   public void settings() {
 	// put your size call here
-    size(400, 400);
+    size(800, 800);
+    backgroundImage = loadImage("https://happycoding.io/images/stanley-1.jpg");
   }
 
-  /** 
-   * Called once at the beginning of execution.  Add initial set up
-   * values here i.e background, stroke, fill etc.
-   */
   public void setup() {
     background(210, 255, 173);
   }
@@ -24,12 +24,7 @@ public class Sketch extends PApplet {
    */
   public void draw() {
 	  
-	// sample code, delete this stuff
-    stroke(128);
-    line(150, 25, 270, 350);  
-
-    stroke(255);
-    line(50, 125, 70, 50);  
+    image(backgroundImage, 0, 0, 800, 800);
   }
   
   // define other methods down here.
